@@ -1033,13 +1033,13 @@ void Audio_Stream::streamEndEncountered()
         return;
     }
 
-    if (!(contentLength() > 0)) {
-        /* Continuous streams are not supposed to end */
-        
-        closeAndSignalError(AS_ERR_NETWORK, CFSTR("Stream ended abruptly"));
-        
-        return;
-    }
+    //if (!(contentLength() > 0)) {
+    //    /* Continuous streams are not supposed to end */
+    //
+    //    closeAndSignalError(AS_ERR_NETWORK, CFSTR("Stream ended abruptly"));
+    //
+    //    return;
+    //}
     
     setState(END_OF_FILE);
     
